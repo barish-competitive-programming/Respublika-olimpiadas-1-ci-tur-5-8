@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+    int n;
+    cin>>n;
+    int birinci = (n/10000)%10;
+    int ikinci = (n/1000)%10;
+    int dorduncu = (n/10)%10;
+    int besinci = n%10;
+    cout << (birinci+ikinci) – (dorduncu+besinci) << endl;
+    return 0;
+}
