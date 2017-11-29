@@ -8,24 +8,28 @@ int main()
     int A=1,B=2;
     cpp_int n, P=1; //cpp_int hemin kitabxanada olan boyuk ededdir
     cin>>n;
-    if(n%2==1){
-    cout<<n<<" "<<n<<endl;
-    return 0;
+    if(n%2==1)
+    {
+        cout<<n<<" "<<n<<endl;
+        return 0;
     }
-    for(int A=1;A<=n;A++){
-    P=1; //her defe P ededine 1 edirik ki, hasiller qarismasin
-    B=A+1;
-    int i=A;
-    while(i<=B){
-    P*=i;
-    if(P<n)B++;
-    if(P==n){
-    cout<<A<<" "<<B-1<<endl;
-    return 0;
-    }
-    if(P>n)break;
-    i++;
-    }
+    for(int A=1; A<=n; A++)
+    {
+        P=1; //her defe P ededine 1 edirik ki, hasiller qarismasin
+        B=A+1;
+        int i=A;
+        while(i<=B)
+        {
+            P*=i;
+            if(P<n)B++;
+            if(P==n)
+            {
+                cout<<A<<" "<<B-1<<endl;
+                return 0;
+            }
+            if(P>n)break;
+            i++;
+        }
     }
     return 0;
 }
