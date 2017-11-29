@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#define intt long long
+using namespace std;
+
+intt upd(intt mod, intt n, intt k){
+    intt s = n;
+    while(s = s/10)
+        mod *= 10;
+    return (mod*10 + n)%k;
+}
+
+int main()
+{
+    intt n, k, mod;
+    cin>>n>>k;
+    mod = n%k;
+    while(mod)
+        mod = upd(mod, ++n, k);
+    cout<<n<<endl;
+    return 0;
+}
